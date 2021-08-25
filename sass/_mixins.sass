@@ -1,0 +1,30 @@
+@use 'variables'
+
+@mixin container 
+  max-width: variables.$container-width
+  padding: 1.5rem 0
+  margin: 0 auto
+
+@mixin flex-center
+  display: flex
+  align-items: center 
+  justify-content: center 
+
+@mixin bg-img($img) //adiciono dentro do '()' o parametro img
+  background-image: url('../img/#{$img}')
+  background-size: 100%
+  background-position: center
+  background-repeat: no-repeat
+  filter: grayscale(100%) //adiciona filtro cinza
+  transition: .6s //transição do hover
+
+  &:hover
+    background-size: 110% //aumenta o tamanho da img
+    filter: grayscale(0) //tira o filtro da img
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/#{$img}')
+
+//nota: (..)=>volta a pasta('../img/')acessa a pasta img, adiciona a variavel #{$img} => para tornar a img de fundo dinâmica */
+
+@mixin mobile
+  @media(max-width: 425px)
+    @content
