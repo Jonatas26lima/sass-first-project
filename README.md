@@ -17,4 +17,4 @@ Nesse minicurso está implícito o básico de Sass, nele criamos uma galeria de 
 
 ### O resultado
 
-![models.jpg](../img_doc/models.jpg)
+![models.jpg](https://github.com/Jonatas26lima/sass-first-project/blob/main/img_doc/models.jpg)
